@@ -1,13 +1,13 @@
 import express from "express"
-import { log } from "./utils"
+
+import Logger from "./utils/Logger"
 
 const app = express()
-const port = 3000
+
+const logger: any = new Logger()
 app.get("/", (req, res) => {
-    log("error", "Hello from the other side")
+    logger.log("error", "Hello from the other side")
     res.send("dsdsdsds")
 })
 
-app.listen(port, () => {
-    console.log(`server is listening on ${port}`)
-})
+export default app
