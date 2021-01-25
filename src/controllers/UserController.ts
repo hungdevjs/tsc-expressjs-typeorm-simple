@@ -38,6 +38,18 @@ class UserController {
             next()
         }
     }
+
+    public static delete = async (req: any, res: Response, next: any) => {
+        try {
+            const { id } = req.params
+            await service.delete(id)
+            res.status(200).end()
+        } catch (err) {
+            req.errorCode = 400
+            req.errorMessage = err.message
+            next()
+        }
+    }
 }
 
 export default UserController
