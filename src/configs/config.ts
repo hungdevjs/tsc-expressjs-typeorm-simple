@@ -1,5 +1,4 @@
 import { IDatabase } from "./interface"
-console.log(process.env.DB_NAME)
 const config: { [key: string]: IDatabase } = {
     development: {
         database: <string>process.env.DB_NAME,

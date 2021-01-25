@@ -1,13 +1,22 @@
 import express from "express"
 
-import Logger from "./utils/Logger"
+import handleRequest from "./middlewares/handleRequest"
+import handleError from "./middlewares/handleError"
+
+import routes from "./routes/index"
 
 const app = express()
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
 
-const logger: any = new Logger()
+app.use("*", handleRequest)
+
+app.use("/api", routes)
+
 app.get("/", (req, res) => {
-    logger.log("error", "Hello from the other side")
-    res.send("dsdsdsds")
+    res.send("Server is runnning")
 })
+
+app.use(handleError)
 
 export default app

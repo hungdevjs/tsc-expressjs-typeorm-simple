@@ -11,7 +11,7 @@ import {
 
 @Entity()
 @Unique(["email"])
-export class User {
+export default class User {
     @PrimaryGeneratedColumn()
     public id!: number
 
