@@ -4,7 +4,8 @@ import UserController from "..//controllers/UserController"
 
 const router = Router()
 
-router.get("/", UserController.listAll)
-router.post("/", UserController.addNew)
+router.get("/", UserController.get)
+router.get("/:id", UserController.getById)
+router.post("/", UserController.add)
 
 export default router
