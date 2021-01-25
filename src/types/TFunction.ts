@@ -1,0 +1,1 @@
+export type TFunction<T> = () => T

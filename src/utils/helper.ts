@@ -1,6 +1,6 @@
-import { CustomFunction } from "../types/CustomFunction"
+import { TFunction } from "../types/TFunction"
 
-export const getDateTimeNow: CustomFunction<string> = () => {
+export const getDateTimeNow: TFunction<string> = () => {
     const now: Date = new Date()
     const date: number = now.getDate()
     const month: number = now.getMonth() + 1

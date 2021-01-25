@@ -1,1 +1,0 @@
-export type CustomFunction<T> = () => T

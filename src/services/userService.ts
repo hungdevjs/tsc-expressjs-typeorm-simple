@@ -19,7 +19,6 @@ export default class UserService implements IUserService {
     }
 
     async getById(id: number): Promise<UserDto> {
-
         const userRepository = getRepository(User)
         const user = await userRepository.findOneOrFail(id)
         if (!user) throw new Error("User doesn't exist")
