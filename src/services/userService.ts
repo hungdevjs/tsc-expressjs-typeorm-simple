@@ -1,7 +1,7 @@
 import { getRepository } from "typeorm"
 
 import User from "../models/entities/User"
-import { IUser } from "../models/interfaces/User"
+import { IUser } from "../interfaces/User"
 import UserDto from "../models/dtos/UserDto"
 
 interface IUserService {
