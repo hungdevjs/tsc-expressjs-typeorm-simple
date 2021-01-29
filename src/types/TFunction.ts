@@ -1,1 +1,1 @@
-export type TFunction<T> = () => T
+export type TFunction<T> = (params?: any) => T
